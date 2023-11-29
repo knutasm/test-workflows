@@ -1,0 +1,14 @@
+on:
+    workflow_dispatch:
+
+jobs:
+    run_callable:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            
+            - name: Run callable
+              uses: ./callable.yaml
+              with:
+                  layer: test_layer
+                  environment: test_environment

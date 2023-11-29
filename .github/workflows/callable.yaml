@@ -1,0 +1,38 @@
+name: Build and Deploy
+
+on:
+    workflow_call:
+        inputs:
+            environment:
+                description: 'Environment to deploy to'
+                type: string
+                required: true
+            layer:
+                description: 'Layer to deploy'
+                type: string
+                required: true
+        # secrets: 
+        #     SNOWFLAKE_KEY_FILE:
+        #         description: 'Keyfile for environment'
+        #         required: true
+        #     SNOWFLAKE_KEY_PASSWORD:
+        #         description: 'Password for keyfile'
+        #         required: true
+
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: Build
+              run: |
+                  echo "Building..."
+                  echo "Environment: ${{ inputs.environment }}"
+                  echo "Layer: ${{ inputs.layer }}"
+            - name: Deploy
+              run: |
+                  echo "Deploying..."
+                  echo "Environment: ${{ inputs.environment }}"
+                  echo "Layer: ${{ inputs.layer }}"
+
