@@ -9,5 +9,5 @@ jobs:
     steps:
       - name: test
         run: |
-          echo ${{ github.event.number }}
+          echo 'The event is: ${{ github.event.number }}'
     
