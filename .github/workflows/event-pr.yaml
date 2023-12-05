@@ -1,0 +1,13 @@
+on:
+  workflow_dispatch:
+  pull_request:
+
+jobs:
+  echo_event:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: test
+        run: |
+          echo ${{ github.event.number }}
+    
