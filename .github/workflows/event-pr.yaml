@@ -5,6 +5,7 @@ on:
 jobs:
   echo_event:
     runs-on: ubuntu-latest
+    permissions: write
 
     steps:
       - name: checkout
