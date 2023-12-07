@@ -7,7 +7,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+        
       - name: test
         run: |
-          echo 'The event is: ${{ github.event.number }}'
-    
+          echo 'The event is: ${{ github.actor }}' > test.txt
+
+      - name: commmit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Automated change
+          
