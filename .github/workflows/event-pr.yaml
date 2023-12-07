@@ -6,7 +6,7 @@ jobs:
   echo_event:
     runs-on: ubuntu-latest
     permissions: 
-      contents: write
+      contents: write, read
 
     steps:
       - name: checkout
