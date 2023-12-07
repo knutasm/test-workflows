@@ -19,7 +19,7 @@ jobs:
 
       - name: test json
         run: |
-          echo {"key": "value} > test.json
+          echo {"key": "value"} > test.json
 
       - name: commmit
         uses: stefanzweifel/git-auto-commit-action@v5
