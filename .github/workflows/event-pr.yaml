@@ -15,10 +15,15 @@ jobs:
         
       - name: test
         run: |
-          echo 'The event is: ${{ github.actor }}' > test.txt
+          echo 'The event is: ${{ github.actor }} i wrote it again' > test.txt
+
+      - name: test json
+        run: |
+          echo {"key": "value} > test.json
 
       - name: commmit
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Automated change
+          file_pattern: '*.sql *.yaml *.yml'
           
