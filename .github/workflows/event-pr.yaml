@@ -25,5 +25,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Automated change
-          file_pattern: '*.sql *.yaml *.yml *.txt'
-          
+          file_pattern: '*.sql *.yaml *.yml'
