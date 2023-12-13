@@ -8,4 +8,6 @@ jobs:
         
         steps:
             - name: echo
-              run: echo "Hello World"
+              run: |
+                  pwd
+                  ls
