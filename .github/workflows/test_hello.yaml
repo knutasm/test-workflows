@@ -15,5 +15,10 @@ jobs:
       - name: Install dependencies  
         run: pip install pytest pytest-html
 
+      - name: FInd files
+        run: |
+          pwd
+          ls
+
       - name: run tests
         run: pytest src -v
