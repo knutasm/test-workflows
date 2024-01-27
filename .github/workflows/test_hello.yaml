@@ -11,3 +11,9 @@ jobs:
     steps:
       - name: Say it
         run: echo "Hello tom"
+
+      - name: Install dependencies  
+        run: pip install pytest pytest-html
+
+      - name: run tests
+        run: pytest -v
