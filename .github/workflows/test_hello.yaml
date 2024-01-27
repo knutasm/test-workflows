@@ -16,4 +16,4 @@ jobs:
         run: pip install pytest pytest-html
 
       - name: run tests
-        run: pytest -v
+        run: pytest src -v
