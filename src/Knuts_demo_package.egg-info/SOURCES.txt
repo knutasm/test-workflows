@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/function.py
+src/test_funtion.py
+src/Knuts_demo_package.egg-info/PKG-INFO
+src/Knuts_demo_package.egg-info/SOURCES.txt
+src/Knuts_demo_package.egg-info/dependency_links.txt
+src/Knuts_demo_package.egg-info/top_level.txt

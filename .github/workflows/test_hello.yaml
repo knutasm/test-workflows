@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install dependencies  
-        run: pip install pytest pytest-html
+        run: pip install pytest pytest-html build
 
       - name: FInd files
         run: |
@@ -25,3 +25,23 @@ jobs:
 
       - name: run tests
         run: pytest src -v
+
+      - name: Build package
+        run: python3 -m build
+
+      - name: Upload packaged project
+        uses: actions/upload-artifact@v4
+        with: 
+          name: my_artifact
+          overwrite: True
+
+  download-package:
+    name: Download the package
+    runs-on: ubuntu-latest
+
+    steps:
+      name: Download the artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: my_artifact
+        
