@@ -37,6 +37,7 @@ jobs:
 
   download-package:
     name: Download the package
+    needs: say_hello
     runs-on: ubuntu-latest
 
     steps:
